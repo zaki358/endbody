@@ -1,0 +1,22 @@
+{
+  "name": "endbody",
+  "version": "1.0.0",
+  "description": "仮想サイト",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zaki358/endbody.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zaki358/endbody/issues"
+  },
+  "homepage": "https://github.com/zaki358/endbody#readme",
+  "devDependencies": {
+    "webpack": "^5.74.0"
+  }
+}
