@@ -24,13 +24,15 @@
 // Component
 // -----------------------------------------------------------------
 
+@use "object/component/font";
+@use "object/component/btn";
 
 // -----------------------------------------------------------------
 // Project
 // -----------------------------------------------------------------
 
-@use "object/project/header" as p-header; 
-
+@use "object/project/header" as p-header;
+@use "object/project/top-group";
 
 // -----------------------------------------------------------------
 // Utility

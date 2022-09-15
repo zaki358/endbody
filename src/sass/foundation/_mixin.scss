@@ -1,0 +1,19 @@
+@use "variables";
+
+//メディアクエリ
+@mixin mq($breakpoint: sp) {
+  @media #{map-get(variables.$breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+//フォント
+@mixin josefin500 {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 500;
+}
+
+@mixin josefin600 {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 600;
+}

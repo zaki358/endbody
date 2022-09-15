@@ -1,0 +1,13 @@
+@use "../foundation/_mixin.scss";
+
+#l-header {
+  position : fixed;
+  display  : block;
+  width    : 100%;
+  height   : 60px;
+  @include mixin.mq("pc") {
+    position: absolute;
+    top : 0;
+    left: 0;
+  }
+}

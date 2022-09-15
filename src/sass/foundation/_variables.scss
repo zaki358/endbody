@@ -1,4 +1,10 @@
+//color
 $pink: #eb51c2;
 $green: #00b21b;
 $black: #111111;
 
+//breakpoint
+$breakpoints: (
+  'sp': '(min-width: 360px)',
+  'pc': '(min-width: 960px)',
+);
