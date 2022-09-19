@@ -1,0 +1,18 @@
+@use "../../foundation/_variables.scss" as val;
+@use "../../foundation/_mixin.scss";
+
+.c-btn {
+  &__top {
+    background-color: val.$pink;
+    border          : none;
+    border-radius   : 50px;
+    text-align      : left;
+    width           : 220px;
+    height          : 45px;
+    @include mixin.mq("pc") {
+      text-align: center;
+      width     : 370px;
+      height    : 90px;
+    }
+  }
+}

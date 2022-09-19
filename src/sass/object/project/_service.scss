@@ -1,0 +1,24 @@
+@use "../../foundation/_mixin.scss";
+@use "../../foundation/_variables.scss" as val;
+
+.p-service {
+  &__content--training {
+    position: relative;
+    height: calc(1.88 * 100vw);
+    max-height: 950px;
+    @include mixin.mq("pc") {
+    }
+  }
+  &__content--food {
+    //@extend .p-service__content--training;
+  }
+  &__service--training {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform     : translateX(-50%);
+    width: 328px;
+    height: 416px;
+    background-color: val.$white;
+  }
+}

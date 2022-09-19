@@ -1,0 +1,78 @@
+@use "../../foundation/_variables.scss" as val;
+@use "../../foundation/_mixin.scss";
+
+
+.c-font {
+  &__top-title {
+    line-height: normal;
+    font-size  : 4.2rem;
+    @include mixin.josefin500;
+    span {
+      background-color: val.$white;
+      span {
+        color: val.$pink;
+      }
+    }
+    @include mixin.mq("pc") {
+      font-size: 9.0rem;
+    }
+  }
+  &__heading--top-main {
+    background-color: val.$white;
+    font-family     : sans-serif;
+    font-weight     : 200;
+    font-size       : 1.3rem;
+    @include mixin.mq("pc") {
+      font-weight: 600;
+      font-size  : 2.8rem;
+    }
+  }
+  &__top--btn {
+    color      : val.$white;
+    font-family: sans-serif;
+    font-weight: 200;
+    font-size  : 1.3rem;
+    margin-left: 10%;
+    @include mixin.mq("pc") {
+      font-weight: 600;
+      font-size  : 2.0rem;
+      margin-left: 0;
+    }
+  }
+  &__catchphrase--sub {
+    line-height: normal;
+    text-align: center;
+    color     : val.$pink;
+    height    : auto;
+    width     : 274px;
+    font-size : 54px;
+    @include mixin.josefin600;
+    @include mixin.mq("pc") {
+      width: auto;
+      font-size: 10.8rem;
+    }
+  }
+  &__heading--top-sub {
+    font-family: sans-serif;
+    font-weight: 200;
+    font-size  : 1.6rem;
+    span {
+      color: val.$pink;
+    }
+    @include mixin.mq("pc") {
+      font-weight: 600;
+      font-size  : 3.2rem;
+    }
+  }
+  &__text {
+    min-width   : 335px;
+    margin-left : 25px;
+    margin-right: 25px;
+    font-size   : 1.4rem;
+    line-height : 2.7rem;
+    @include mixin.mq("pc") {
+      font-size  : 1.6rem;
+      line-height: 3.2rem;
+    }
+  }
+}

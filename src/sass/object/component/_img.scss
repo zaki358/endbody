@@ -1,0 +1,19 @@
+@use "../../foundation/_mixin.scss";
+
+.c-img {
+  &__top-group {
+    object-fit   : cover;
+    border-radius: 0 0 0 30px;
+    width        : 70%;
+    height       : 410px;
+    @include mixin.mq("pc") {
+      border-radius: 0 0 0 50px;
+      width        : 75%;
+      height       : 680px;
+    }
+  }
+  &__service--training {
+    object-fit: cover;
+    width: 100%;
+  }
+}
