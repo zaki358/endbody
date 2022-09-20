@@ -3,8 +3,9 @@
 
 .p-service {
   &__content--training {
-    position: relative;
-    height: calc(1.88 * 100vw);
+    // position: relative;
+    // height: calc(1.88 * 100vw);
+    height: auto;
     max-height: 950px;
     @include mixin.mq("pc") {
     }
@@ -13,12 +14,14 @@
     //@extend .p-service__content--training;
   }
   &__service--training {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform     : translateX(-50%);
-    width: 328px;
-    height: 416px;
+    border-radius: 8px;
+    box-shadow   : 0 0 20px 5px rgba(0, 0, 0, 0.5);
+    position     : relative;
+    z-index      : 1;
+    width        : 88vw;
+    height       : auto;
+    max-height   : 416px;
+    margin       : -10px auto 0 auto;
     background-color: val.$white;
   }
 }

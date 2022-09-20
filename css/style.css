@@ -40,6 +40,11 @@ html {
   font-size: 62.5%;
 }
 
+body {
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
 a {
   text-decoration: none;
   display: inline-block;
@@ -146,18 +151,32 @@ ul {
     font-size: 3.2rem;
   }
 }
-.c-font__text {
-  min-width: 335px;
-  margin-left: 25px;
-  margin-right: 25px;
+.c-font__text, .c-font__text--service {
+  padding: 0 30px;
   font-size: 1.4rem;
   line-height: 2.7rem;
 }
 @media (min-width: 960px) {
-  .c-font__text {
+  .c-font__text, .c-font__text--service {
     font-size: 1.6rem;
     line-height: 3.2rem;
   }
+}
+.c-font__service--training {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 500;
+  color: #eb51c2;
+  padding: 43px 30px 0 30px;
+  font-size: 1.8rem;
+}
+.c-font__heading--service {
+  margin-top: 15px;
+  padding: 0 30px;
+  font-size: 2.2rem;
+}
+.c-font__text--service {
+  margin-top: 22px;
+  margin-bottom: 68px;
 }
 
 .c-btn__top {
@@ -218,7 +237,7 @@ ul {
 
 .p-top-group {
   position: relative;
-  height: 785px;
+  height: 800px;
 }
 @media (min-width: 960px) {
   .p-top-group {
@@ -268,17 +287,18 @@ ul {
 }
 
 .p-service__content--training {
-  position: relative;
-  height: 188vw;
+  height: auto;
   max-height: 950px;
 }
 .p-service__service--training {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 328px;
-  height: 416px;
+  border-radius: 8px;
+  box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.5);
+  position: relative;
+  z-index: 1;
+  width: 88vw;
+  height: auto;
+  max-height: 416px;
+  margin: -10px auto 0 auto;
   background-color: #ffffff;
 }
 /*# sourceMappingURL=style.css.map */

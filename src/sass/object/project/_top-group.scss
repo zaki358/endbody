@@ -2,7 +2,7 @@
 
 .p-top-group {
   position: relative;
-  height: 785px;
+  height  : 800px;
   @include mixin.mq("pc") {
     height: 1000px;
   }

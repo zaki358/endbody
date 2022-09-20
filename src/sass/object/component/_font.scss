@@ -65,14 +65,34 @@
     }
   }
   &__text {
-    min-width   : 335px;
-    margin-left : 25px;
-    margin-right: 25px;
+    padding: 0 30px;
     font-size   : 1.4rem;
     line-height : 2.7rem;
     @include mixin.mq("pc") {
       font-size  : 1.6rem;
       line-height: 3.2rem;
     }
+  }
+  &__service--training {
+    @include mixin.josefin500;
+    color: val.$pink;
+    padding: 43px 30px 0 30px;
+    font-size: 1.8rem;
+    @include mixin.mq("pc") {
+
+    }
+  }
+  &__heading--service {
+    margin-top: 15px;
+    padding: 0 30px;
+    font-size: 2.2rem;
+    @include mixin.mq("pc") {
+
+    }
+  }
+  &__text--service {
+    @extend .c-font__text;
+    margin-top   : 22px;
+    margin-bottom: 68px;
   }
 }
