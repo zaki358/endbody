@@ -14,6 +14,10 @@
   }
   &__service--training {
     object-fit: cover;
-    width: 100%;
+    width     : 100%;
+    @include mixin.mq("pc") {
+      width  : 950px;
+      height : 550px;
+    }
   }
 }

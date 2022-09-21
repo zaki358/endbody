@@ -151,32 +151,41 @@ ul {
     font-size: 3.2rem;
   }
 }
-.c-font__text, .c-font__text--service {
-  padding: 0 30px;
+.c-font__text {
+  margin: 0 30px;
   font-size: 1.4rem;
   line-height: 2.7rem;
 }
 @media (min-width: 960px) {
-  .c-font__text, .c-font__text--service {
+  .c-font__text {
     font-size: 1.6rem;
     line-height: 3.2rem;
   }
 }
-.c-font__service--training {
+.c-font__service--training, .c-font__service--food {
   font-family: "Josefin Sans", sans-serif;
   font-weight: 500;
   color: #eb51c2;
-  padding: 43px 30px 0 30px;
   font-size: 1.8rem;
+}
+.c-font__service--food {
+  color: #00b21b;
 }
 .c-font__heading--service {
   margin-top: 15px;
-  padding: 0 30px;
   font-size: 2.2rem;
+  line-height: 3.3rem;
 }
 .c-font__text--service {
   margin-top: 22px;
-  margin-bottom: 68px;
+  font-size: 1.4rem;
+  line-height: 2.38rem;
+}
+@media (min-width: 960px) {
+  .c-font__text--service {
+    font-size: 1.6rem;
+    line-height: 3.2rem;
+  }
 }
 
 .c-btn__top {
@@ -213,6 +222,12 @@ ul {
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
+}
+@media (min-width: 960px) {
+  .c-img__service--training {
+    width: 950px;
+    height: 550px;
+  }
 }
 
 .p-header {
@@ -286,19 +301,49 @@ ul {
   }
 }
 
-.p-service__content--training {
+.p-service__content--training, .p-service__content--food {
+  overflow: hidden;
   height: auto;
-  max-height: 950px;
+  padding-bottom: 22px;
 }
-.p-service__service--training {
+@media (min-width: 960px) {
+  .p-service__content--training, .p-service__content--food {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+}
+.p-service__content--food {
+  margin-top: 22px;
+}
+@media (min-width: 960px) {
+  .p-service__content--food {
+    flex-direction: row-reverse;
+  }
+}
+.p-service__section--training, .p-service__section--food {
+  overflow: hidden;
   border-radius: 8px;
   box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.5);
   position: relative;
   z-index: 1;
+  margin: -10px auto 0 auto;
+  padding: 43px 30px 68px 30px;
+  background-color: #ffffff;
+  max-height: 416px;
   width: 88vw;
   height: auto;
-  max-height: 416px;
-  margin: -10px auto 0 auto;
-  background-color: #ffffff;
+}
+@media (min-width: 960px) {
+  .p-service__section--training, .p-service__section--food {
+    margin-left: -10px;
+    margin-right: 0;
+    max-height: initial;
+    width: 555px;
+    height: 495px;
+  }
+  .p-service__section--training02 {
+    margin-top: 20px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

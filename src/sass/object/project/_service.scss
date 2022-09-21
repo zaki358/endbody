@@ -2,26 +2,51 @@
 @use "../../foundation/_variables.scss" as val;
 
 .p-service {
+  &__area {
+    //overflow: hidden;
+  }
   &__content--training {
-    // position: relative;
-    // height: calc(1.88 * 100vw);
-    height: auto;
-    max-height: 950px;
+    overflow      :hidden;
+    height        : auto;
+    //max-height    : 950px;
+    padding-bottom: 22px;
     @include mixin.mq("pc") {
+      display        : flex;
+      justify-content: center;
+      align-items    : flex-end;
     }
   }
   &__content--food {
-    //@extend .p-service__content--training;
+    margin-top: 22px;
+    @extend .p-service__content--training;
+    @include mixin.mq("pc") {
+      flex-direction: row-reverse;
+    }
   }
-  &__service--training {
-    border-radius: 8px;
-    box-shadow   : 0 0 20px 5px rgba(0, 0, 0, 0.5);
-    position     : relative;
-    z-index      : 1;
-    width        : 88vw;
-    height       : auto;
-    max-height   : 416px;
-    margin       : -10px auto 0 auto;
+  &__section--training {
+    overflow        :hidden;
+    border-radius   : 8px;
+    box-shadow      : 0 0 20px 5px rgba(0, 0, 0, 0.5);
+    position        : relative;
+    z-index         : 1;
+    margin          : -10px auto 0 auto;
+    padding         : 43px 30px 68px 30px;
     background-color: val.$white;
+    max-height      : 416px;
+    width           : 88vw;
+    height          : auto;
+    @include mixin.mq("pc") {
+      margin-left: -10px;
+      margin-right: 0;
+      max-height: initial;
+      width     : 555px;
+      height    : 495px
+    }
+  }
+  &__section--food {
+    @extend .p-service__section--training;
+    @include mixin.mq("pc") {
+
+    }
   }
 }
