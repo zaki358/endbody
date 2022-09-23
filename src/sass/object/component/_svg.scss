@@ -1,0 +1,9 @@
+@use "../../foundation/_variables.scss" as val;
+@use "../../foundation/_mixin.scss";
+
+
+.c-svg {
+  &__wave {
+    fill: val.$pink;
+  }
+}

@@ -26,6 +26,7 @@
 @use "object/component/font";
 @use "object/component/btn";
 @use "object/component/img";
+@use "object/component/svg";
 
 // -----------------------------------------------------------------
 // Project
@@ -34,6 +35,7 @@
 @use "object/project/header" as p-header;
 @use "object/project/top-group";
 @use "object/project/service";
+@use "object/project/introduction";
 
 // -----------------------------------------------------------------
 // Utility

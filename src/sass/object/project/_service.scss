@@ -21,6 +21,7 @@
     @extend .p-service__content--training;
     @include mixin.mq("pc") {
       flex-direction: row-reverse;
+      margin-top: 50px;
     }
   }
   &__section--training {
@@ -36,17 +37,22 @@
     width           : 88vw;
     height          : auto;
     @include mixin.mq("pc") {
-      margin-left: -10px;
-      margin-right: 0;
-      max-height: initial;
-      width     : 555px;
-      height    : 495px
+      padding      : 60px 60px 92px 60px;
+      margin-bottom: -10px;
+      margin-left  : -100px;
+      margin-right : 0;
+      max-height   : initial;
+      min-width    : 555px;
+      width        : 38vw;
+      height       : 495px;
+      
     }
   }
   &__section--food {
     @extend .p-service__section--training;
     @include mixin.mq("pc") {
-
+      margin-right: -100px;
+      margin-left : 0;
     }
   }
 }

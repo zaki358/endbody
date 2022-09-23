@@ -15,9 +15,29 @@
   &__service--training {
     object-fit: cover;
     width     : 100%;
+    height: auto;
     @include mixin.mq("pc") {
-      width  : 950px;
-      height : 550px;
+      max-width: 950px;
+      width  : 65vw;
+      min-height: 550px;
+      height: 550px;
+      //object-fit: contain;
+      object-position: left;
+    }
+  }
+  &__service--food {
+    @extend .c-img__service--training;
+    @include mixin.mq("pc") {
+      object-position: center;
+    }
+  }
+  &__introduction {
+    border-radius: 20px 20px 0 0;
+    object-fit: cover;
+    height: 77%;
+    width: 100%;
+    @include mixin.mq("pc") {
+
     }
   }
 }

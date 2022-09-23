@@ -56,6 +56,11 @@ img {
 
 ul {
   list-style: none;
+  padding: 0;
+}
+
+li {
+  padding: 0;
 }
 
 #wrapper {
@@ -187,6 +192,35 @@ ul {
     line-height: 3.2rem;
   }
 }
+.c-font__heading--introduction {
+  color: #ffffff;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 500;
+  font-size: 4rem;
+}
+@media (min-width: 960px) {
+  .c-font__heading--introduction {
+    font-size: 6rem;
+  }
+}
+.c-font__subheading--introduction {
+  color: #ffffff;
+  font-size: 1.4rem;
+}
+@media (min-width: 960px) {
+  .c-font__subheading--introduction {
+    font-size: 2rem;
+  }
+}
+.c-font__menu--introduction {
+  color: #ffffff;
+  font-size: 1.6rem;
+}
+@media (min-width: 960px) {
+  .c-font__menu--introduction {
+    font-size: 1.8rem;
+  }
+}
 
 .c-btn__top {
   background-color: #eb51c2;
@@ -218,16 +252,37 @@ ul {
     height: 680px;
   }
 }
-.c-img__service--training {
+.c-img__service--training, .c-img__service--food {
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
+  height: auto;
 }
 @media (min-width: 960px) {
-  .c-img__service--training {
-    width: 950px;
+  .c-img__service--training, .c-img__service--food {
+    max-width: 950px;
+    width: 65vw;
+    min-height: 550px;
     height: 550px;
+    -o-object-position: left;
+       object-position: left;
   }
+}
+@media (min-width: 960px) {
+  .c-img__service--food {
+    -o-object-position: center;
+       object-position: center;
+  }
+}
+.c-img__introduction {
+  border-radius: 20px 20px 0 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 77%;
+  width: 100%;
+}
+.c-svg__wave {
+  fill: #eb51c2;
 }
 
 .p-header {
@@ -319,6 +374,7 @@ ul {
 @media (min-width: 960px) {
   .p-service__content--food {
     flex-direction: row-reverse;
+    margin-top: 50px;
   }
 }
 .p-service__section--training, .p-service__section--food {
@@ -336,14 +392,118 @@ ul {
 }
 @media (min-width: 960px) {
   .p-service__section--training, .p-service__section--food {
-    margin-left: -10px;
+    padding: 60px 60px 92px 60px;
+    margin-bottom: -10px;
+    margin-left: -100px;
     margin-right: 0;
     max-height: initial;
-    width: 555px;
+    min-width: 555px;
+    width: 38vw;
     height: 495px;
   }
-  .p-service__section--training02 {
-    margin-top: 20px;
+}
+@media (min-width: 960px) {
+  .p-service__section--food {
+    margin-right: -100px;
+    margin-left: 0;
   }
+}
+
+.p-introduction__wave--top svg, .p-introduction__wave--bottom svg {
+  display: block;
+  width: 100vw;
+  height: 25px;
+}
+@media (min-width: 960px) {
+  .p-introduction__wave--top svg, .p-introduction__wave--bottom svg {
+    height: 95px;
+  }
+}
+.p-introduction__container {
+  overflow: hidden;
+  height: auto;
+  background-color: #eb51c2;
+}
+.p-introduction__menu {
+  padding: 0;
+  width: 90vw;
+  margin: 0 auto;
+}
+@media (min-width: 960px) {
+  .p-introduction__menu {
+    width: calc(75vw + 25px);
+  }
+}
+.p-introduction__menu ul {
+  display: flex;
+}
+.p-introduction__list--trainer, .p-introduction__list--staff {
+  position: relative;
+  text-align: center;
+  width: 50%;
+  height: 35px;
+  line-height: 35px;
+}
+.p-introduction__list--trainer::before, .p-introduction__list--staff::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #ffffff;
+}
+.p-introduction__list--staff::before {
+  opacity: 0;
+}
+.p-introduction__area--trainer, .p-introduction__area--staff {
+  margin: 0 auto;
+  width: 90vw;
+  height: auto;
+  min-height: 426px;
+}
+@media (min-width: 960px) {
+  .p-introduction__area--trainer, .p-introduction__area--staff {
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    min-height: inherit;
+  }
+}
+.p-introduction__area--trainer section:last-of-type, .p-introduction__area--staff section:last-of-type {
+  margin-bottom: 50px;
+}
+@media (min-width: 960px) {
+  .p-introduction__area--trainer section:last-of-type, .p-introduction__area--staff section:last-of-type {
+    margin-bottom: 0;
+  }
+}
+.p-introduction__area--staff {
+  display: none;
+}
+.p-introduction__card {
+  background-color: #ffffff;
+  margin-top: 30px;
+  border-radius: 20px;
+}
+@media (min-width: 960px) {
+  .p-introduction__card {
+    width: 25vw;
+    height: auto;
+    margin: 0 7.5px;
+  }
+}
+.p-introduction__card p {
+  padding: 20px 20px 36px 20px;
+}
+@media (min-width: 960px) {
+  .p-introduction__card p {
+    padding-bottom: 47px;
+  }
+}
+.p-introduction__wave--bottom {
+  margin-top: -2px;
 }
 /*# sourceMappingURL=style.css.map */
