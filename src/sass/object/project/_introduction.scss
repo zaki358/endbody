@@ -8,6 +8,7 @@
       display: block;
       width: 100vw;
       height: 25px;
+      margin-bottom: -1px;
       @include mixin.mq("pc") {
         height: 95px;
       }
@@ -18,6 +19,20 @@
     overflow: hidden;
     height: auto;
     background-color: val.$pink;
+    h3 {
+      width: 90vw;
+      margin: 0 auto;
+      @include mixin.mq("pc") {
+        width: 80vw;
+      }
+    }
+    h4{
+      width: 90vw;
+      margin: 0 auto;
+      @include mixin.mq("pc") {
+        width: 80vw;
+      }
+    }
   }
   &__menu {
     padding: 0;
@@ -60,12 +75,12 @@
     width: 90vw;
     height: auto;
     min-height: 426px;
+    padding: 20.5px 0 50px 0;
     @include mixin.mq("pc") {
-      margin-bottom: 50px;
       display: flex;
       flex-direction: row;
       justify-content: center;
-      width: 100%;
+      width: 80vw;
       //margin: 0;
       min-height: inherit;
     }

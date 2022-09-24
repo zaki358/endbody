@@ -123,4 +123,10 @@
       font-size: 1.8rem;
     }
   }
+  &__card {
+    font-size: 1.4rem;
+    @include mixin.mq("pc") {
+      font-size: 1.5rem;
+    }
+  }
 }
