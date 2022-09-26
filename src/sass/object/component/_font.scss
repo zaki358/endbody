@@ -129,4 +129,21 @@
       font-size: 1.5rem;
     }
   }
+  &__heading--slider {
+    @include mixin.josefin500;
+    line-height: 3.2rem;
+    font-size: 3.2rem;
+    @include mixin.mq("pc") {
+      line-height: 6.4rem;
+      font-size: 6.4rem;
+    }
+  }
+  &__subheading--slider {
+    color: val.$pink;
+    font-size: 1.4rem;
+    //line-height: 1.4rem;
+    @include mixin.mq("pc") {
+      font-size: 2.0rem;
+    }
+  }
 }

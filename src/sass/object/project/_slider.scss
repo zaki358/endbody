@@ -1,37 +1,112 @@
-.p-slider {
-  &____container{
+@use "../../foundation/_mixin.scss";
+@use "../../foundation/_variables.scss" as val;
 
+.p-slider {
+  &__container {
+    padding-top: 40px;
+    @include mixin.mq("pc") {
+      padding-top: 12px;
+
+    }
+    h3,h4 {
+      width: 90vw;
+      margin: auto;
+    }
+    h3 {
+      height: 32px;
+      @include mixin.mq("pc") {
+        height: 64px;
+      }
+    }
+    h4 {
+      height: 14px;
+      @include mixin.mq("pc") {
+        height: 20px;
+      }
+    }
   }
   &__area {
     width: 90vw;
     height: auto;
     position: relative;
     margin: auto;
+    padding-bottom: 42px;
+    margin-top: 28px;
+    @include mixin.mq("pc") {
+      padding-bottom: 98px;
+      margin-top: 38px;
+    }
     .swiper {
       width: 100%;
       height: auto;
     }
     .swiper-wrapper {
     }
-    .swiper-button-prev {
-      position: absolute;
-      top: 50%;
-      left: 1.5%;
-      transform: translate(-50%, -50%);
-      width: 10vw;
-      height: 10vw;
+    .swiper-slide {
+      //width: 100%;
+    }
+    .swiper-button-prev,
+    .swiper-button-next {
+      width: 40px;
+      height: 40px;
       border-radius: 50%;
-      background-color: black;
-      z-index: 100;
-      margin-left: -10px;
+      background-color: val.$white;
       &::after {
+        content: "";
         position: absolute;
-        z-index: 11;
-        left: 0;
-        top: 50%;
+        left: 40%;
+        top: 40%;
         width: 10px;
         height: 10px;
       }
+      @include mixin.mq("pc") {
+        width: 80px;
+        height: 80px;
+        &::after {
+          width: 15px;
+          height: 15px;
+        }
+      }
+    }
+    .swiper-button-prev {
+      position: absolute;
+      top: 50%;
+      left: 0.5%;
+      transform: translate(-50%, -50%);
+      &::after {
+        border-bottom: solid 4px val.$pink;
+        border-left: solid 4px val.$pink;
+        transform: rotate(45deg);
+        left: 40%;
+      }
+      @include mixin.mq("pc") {
+        &::after {
+        }
+      }
+    }
+    .swiper-button-next {
+      position: absolute;
+      top: 50%;
+      left: 100%;
+      transform: translate(-50%, -50%);
+      &::after {
+        border-top: solid 4px val.$pink;
+        border-right: solid 4px val.$pink;
+        transform: rotate(45deg);
+        left: 30%;
+      }
+      @include mixin.mq("pc") {
+        &::after {
+        }
+      }
+    }
+    .swiper-pagination {
+      @include mixin.mq("pc") {
+        bottom: 64px !important; 
+      }
+    }
+    .swiper-pagination-bullet-active {
+      background: val.$pink !important;
     }
   }
 }

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
   Josh's Custom CSS Reset
   https://www.joshwcomeau.com/css/custom-css-reset/
@@ -229,6 +230,27 @@ li {
     font-size: 1.5rem;
   }
 }
+.c-font__heading--slider {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 500;
+  line-height: 3.2rem;
+  font-size: 3.2rem;
+}
+@media (min-width: 960px) {
+  .c-font__heading--slider {
+    line-height: 6.4rem;
+    font-size: 6.4rem;
+  }
+}
+.c-font__subheading--slider {
+  color: #eb51c2;
+  font-size: 1.4rem;
+}
+@media (min-width: 960px) {
+  .c-font__subheading--slider {
+    font-size: 2rem;
+  }
+}
 
 .c-btn__top {
   background-color: #eb51c2;
@@ -288,7 +310,7 @@ li {
      object-fit: cover;
   width: 100%;
 }
-.c-img__slide {
+.c-img__slider {
   display: block;
   width: 100%;
   height: 100%;
@@ -541,34 +563,167 @@ li {
   margin-top: -2px;
 }
 
+.p-slider__container {
+  padding-top: 40px;
+}
+@media (min-width: 960px) {
+  .p-slider__container {
+    padding-top: 12px;
+  }
+}
+.p-slider__container h3, .p-slider__container h4 {
+  width: 90vw;
+  margin: auto;
+}
+.p-slider__container h3 {
+  height: 32px;
+}
+@media (min-width: 960px) {
+  .p-slider__container h3 {
+    height: 64px;
+  }
+}
+.p-slider__container h4 {
+  height: 14px;
+}
+@media (min-width: 960px) {
+  .p-slider__container h4 {
+    height: 20px;
+  }
+}
 .p-slider__area {
   width: 90vw;
   height: auto;
   position: relative;
   margin: auto;
+  padding-bottom: 42px;
+  margin-top: 28px;
+}
+@media (min-width: 960px) {
+  .p-slider__area {
+    padding-bottom: 98px;
+    margin-top: 38px;
+  }
 }
 .p-slider__area .swiper {
   width: 100%;
   height: auto;
 }
+.p-slider__area .swiper-button-prev,
+.p-slider__area .swiper-button-next {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #ffffff;
+}
+.p-slider__area .swiper-button-prev::after,
+.p-slider__area .swiper-button-next::after {
+  content: "";
+  position: absolute;
+  left: 40%;
+  top: 40%;
+  width: 10px;
+  height: 10px;
+}
+@media (min-width: 960px) {
+  .p-slider__area .swiper-button-prev,
+.p-slider__area .swiper-button-next {
+    width: 80px;
+    height: 80px;
+  }
+  .p-slider__area .swiper-button-prev::after,
+.p-slider__area .swiper-button-next::after {
+    width: 15px;
+    height: 15px;
+  }
+}
 .p-slider__area .swiper-button-prev {
   position: absolute;
   top: 50%;
-  left: 1.5%;
+  left: 0.5%;
   transform: translate(-50%, -50%);
-  width: 10vw;
-  height: 10vw;
-  border-radius: 50%;
-  background-color: black;
-  z-index: 100;
-  margin-left: -10px;
 }
 .p-slider__area .swiper-button-prev::after {
+  border-bottom: solid 4px #eb51c2;
+  border-left: solid 4px #eb51c2;
+  transform: rotate(45deg);
+  left: 40%;
+}
+.p-slider__area .swiper-button-next {
   position: absolute;
-  z-index: 11;
-  left: 0;
   top: 50%;
-  width: 10px;
-  height: 10px;
+  left: 100%;
+  transform: translate(-50%, -50%);
+}
+.p-slider__area .swiper-button-next::after {
+  border-top: solid 4px #eb51c2;
+  border-right: solid 4px #eb51c2;
+  transform: rotate(45deg);
+  left: 30%;
+}
+@media (min-width: 960px) {
+  .p-slider__area .swiper-pagination {
+    bottom: 64px !important;
+  }
+}
+.p-slider__area .swiper-pagination-bullet-active {
+  background: #eb51c2 !important;
+}
+
+.p-price__wave--top svg, .p-price__wave--bottom svg {
+  display: block;
+  width: 100vw;
+  height: 25px;
+  margin-bottom: -1px;
+}
+@media (min-width: 960px) {
+  .p-price__wave--top svg, .p-price__wave--bottom svg {
+    height: 95px;
+  }
+}
+.p-price__wave--bottom {
+  margin-top: -2px;
+}
+
+.scroll_content { /* リスト全体のスタイル */
+  display: flex;
+  max-width: 800px;
+  margin: auto;
+  overflow-x: hidden;
+}
+
+.scroll_content li { /* 各リストのスタイル */
+  width: 90%;
+  padding: 8px;
+  margin: 3px;
+  flex-shrink: 0;
+  list-style: none;
+}
+
+.scroll_content img { /* 画像のスタイル */
+  width: 100%;
+  max-height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.scroll_content::-webkit-scrollbar {
+  height: 12px; /* スクロールバーの高さ */
+}
+
+.scroll_content::-webkit-scrollbar-thumb {
+  background: #aaa; /* ツマミの色 */
+  border-radius: 6px; /* ツマミ両端の丸み */
+}
+
+.scroll_content::-webkit-scrollbar-track {
+  background: #ddd; /* トラックの色 */
+  border-radius: 6px; /* トラック両端の丸み */
+}
+
+@media screen and (min-width: 450px) {
+  .scroll_content li {
+    width: 45%;
+  }
 }
 /*# sourceMappingURL=style.css.map */
