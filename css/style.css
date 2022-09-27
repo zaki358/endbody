@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /*
   Josh's Custom CSS Reset
   https://www.joshwcomeau.com/css/custom-css-reset/
@@ -250,6 +249,24 @@ li {
   .c-font__subheading--slider {
     font-size: 2rem;
   }
+}
+.c-font__heading--price {
+  color: #eb51c2;
+  height: 35px;
+  font-size: 2.6rem;
+}
+.c-font__main--price {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 500;
+  line-height: 5.8rem;
+  height: 48px;
+  font-size: 4.8rem;
+}
+.c-font__text--price {
+  font-size: 1.6rem;
+}
+.c-font__sub-heading--price {
+  font-size: 1.8rem;
 }
 
 .c-btn__top {
@@ -670,6 +687,45 @@ li {
   background: #eb51c2 !important;
 }
 
+.p-price__container {
+  background-color: #eb51c2;
+}
+.p-price__container > h3 {
+  padding-left: 30px;
+}
+.p-price__container > h4 {
+  padding-left: 30px;
+}
+.p-price__area {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  padding-left: 20px;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+.p-price__box {
+  position: relative;
+  text-align: center;
+  background-color: #ffffff;
+  flex: 0 0 320px;
+  height: 492px;
+  border-radius: 10px;
+  margin: 0 10px;
+}
+.p-price__content--main {
+  width: 250px;
+  margin: auto;
+  padding-top: 35px;
+  padding-bottom: 28px;
+}
+.p-price__content--sub {
+  width: 250px;
+  margin: auto;
+  padding-top: 27px;
+  padding-bottom: 33px;
+  border-top: solid rgba(0, 0, 0, 0.4);
+}
 .p-price__wave--top svg, .p-price__wave--bottom svg {
   display: block;
   width: 100vw;
@@ -683,47 +739,5 @@ li {
 }
 .p-price__wave--bottom {
   margin-top: -2px;
-}
-
-.scroll_content { /* リスト全体のスタイル */
-  display: flex;
-  max-width: 800px;
-  margin: auto;
-  overflow-x: hidden;
-}
-
-.scroll_content li { /* 各リストのスタイル */
-  width: 90%;
-  padding: 8px;
-  margin: 3px;
-  flex-shrink: 0;
-  list-style: none;
-}
-
-.scroll_content img { /* 画像のスタイル */
-  width: 100%;
-  max-height: 200px;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.scroll_content::-webkit-scrollbar {
-  height: 12px; /* スクロールバーの高さ */
-}
-
-.scroll_content::-webkit-scrollbar-thumb {
-  background: #aaa; /* ツマミの色 */
-  border-radius: 6px; /* ツマミ両端の丸み */
-}
-
-.scroll_content::-webkit-scrollbar-track {
-  background: #ddd; /* トラックの色 */
-  border-radius: 6px; /* トラック両端の丸み */
-}
-
-@media screen and (min-width: 450px) {
-  .scroll_content li {
-    width: 45%;
-  }
 }
 /*# sourceMappingURL=style.css.map */

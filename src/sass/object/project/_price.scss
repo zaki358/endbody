@@ -2,6 +2,57 @@
 @use "../../foundation/_variables.scss" as val;
 
 .p-price {
+  &__container {
+    background-color: val.$pink;
+    & > h3 {
+      padding-left: 30px;
+    }
+    & > h4 {
+      padding-left: 30px;
+    }
+  }
+  &__area {
+    
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    padding-left: 20px;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  &__box {
+    position: relative;
+    text-align: center;
+    background-color: val.$white;
+    flex: 0 0 320px;
+    height: 492px;
+    border-radius: 10px;
+    margin: 0 10px;
+  }
+  &__content {
+    &--main {
+      width: 250px;
+      margin: auto;
+      padding-top   : 35px;
+      padding-bottom: 28px;
+      //border-bottom: solid rgba(0, 0, 0, .4);
+    }
+    &--sub {
+      width: 250px;
+      margin: auto;
+      padding-top: 27px;
+      padding-bottom: 33px;
+      border-top: solid rgba(0, 0, 0, .4);
+    }
+    &--plate {
+
+    }
+  }
+
+
+
+
+
   &__wave--top {
     svg {
       display: block;
@@ -17,48 +68,4 @@
     margin-top: -2px;
     @extend .p-price__wave--top;
   }
-}
-
-.scroll_content { /* リスト全体のスタイル */
-  display: flex;
-  max-width: 800px;
-  margin: auto;
-  overflow-x: hidden;
-}
- 
-.scroll_content li { /* 各リストのスタイル */
-  width: 90%;
-  padding: 8px;
-  margin: 3px;
-  flex-shrink: 0;
-  list-style: none;
-}
- 
-.scroll_content img { /* 画像のスタイル */
-  width: 100%;
-  max-height: 200px;
-  object-fit: cover;
-}
- 
-.scroll_content::-webkit-scrollbar {
-  height: 12px; /* スクロールバーの高さ */
-}
- 
-.scroll_content::-webkit-scrollbar-thumb {
-  background: #aaa; /* ツマミの色 */
-  border-radius: 6px; /* ツマミ両端の丸み */
-}
- 
-.scroll_content::-webkit-scrollbar-track {
-  background: #ddd; /* トラックの色 */
-  border-radius: 6px; /* トラック両端の丸み */
-}
- 
- 
-@media screen and (min-width: 450px) {
- 
-  .scroll_content li {
-    width: 45%;
-  }
- 
 }
