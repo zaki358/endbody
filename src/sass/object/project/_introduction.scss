@@ -21,26 +21,26 @@
     height: auto;
     background-color: val.$pink;
     h3 {
-      width: 90vw;
+      width: 85vw;
       margin: 0 auto;
       @include mixin.mq("pc") {
-        width: 80vw;
+        width: 85vw;
       }
     }
     h4{
-      width: 90vw;
+      width: 85vw;
       margin: 0 auto;
       @include mixin.mq("pc") {
-        width: 80vw;
+        width: 85vw;
       }
     }
   }
   &__menu {
     padding: 0;
-    width: 90vw;
+    width: 85vw;
     margin: 0 auto;
     @include mixin.mq("pc") {
-      width: calc(75vw + 25px);
+      //width: calc(75vw + 25px);
     }
     ul {
       display: flex;
@@ -73,15 +73,15 @@
   }
   &__area--trainer {
     margin: 0 auto;
-    width: 90vw;
+    width: 85vw;
     height: auto;
     min-height: 426px;
     padding: 20.5px 0 50px 0;
     @include mixin.mq("pc") {
       display: flex;
       flex-direction: row;
-      justify-content: center;
-      width: 80vw;
+      justify-content: space-between;
+      width: 85vw;
       //margin: 0;
       min-height: inherit;
     }
@@ -101,7 +101,8 @@
     margin-top: 30px;
     border-radius: 20px;
     @include mixin.mq("pc") {
-      width: 25vw;
+      flex: 0 0 30%;
+      //width: 25vw;
       height: auto;
       margin: 0 7.5px;
     }

@@ -268,7 +268,38 @@ li {
 .c-font__sub-heading--price {
   font-size: 1.8rem;
 }
-
+.c-font__plate--price {
+  font-size: 2rem;
+  color: #eb51c2;
+}
+.c-font__heading--qanda {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 500;
+  font-size: 4rem;
+}
+@media (min-width: 960px) {
+  .c-font__heading--qanda {
+    font-size: 6rem;
+  }
+}
+.c-font__sub-heading--qanda {
+  color: #eb51c2;
+  font-size: 1.2rem;
+}
+@media (min-width: 960px) {
+  .c-font__sub-heading--qanda {
+    font-size: 2rem;
+  }
+}
+.c-font__text--qanda {
+  font-size: 1.5rem;
+}
+.c-font__icon--qanda {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 600;
+  color: #eb51c2;
+  font-size: 2.6rem;
+}
 .c-btn__top {
   background-color: #eb51c2;
   border: none;
@@ -480,32 +511,27 @@ li {
   background-color: #eb51c2;
 }
 .p-introduction__container h3 {
-  width: 90vw;
+  width: 85vw;
   margin: 0 auto;
 }
 @media (min-width: 960px) {
   .p-introduction__container h3 {
-    width: 80vw;
+    width: 85vw;
   }
 }
 .p-introduction__container h4 {
-  width: 90vw;
+  width: 85vw;
   margin: 0 auto;
 }
 @media (min-width: 960px) {
   .p-introduction__container h4 {
-    width: 80vw;
+    width: 85vw;
   }
 }
 .p-introduction__menu {
   padding: 0;
-  width: 90vw;
+  width: 85vw;
   margin: 0 auto;
-}
-@media (min-width: 960px) {
-  .p-introduction__menu {
-    width: calc(75vw + 25px);
-  }
 }
 .p-introduction__menu ul {
   display: flex;
@@ -531,7 +557,7 @@ li {
 }
 .p-introduction__area--trainer, .p-introduction__area--staff {
   margin: 0 auto;
-  width: 90vw;
+  width: 85vw;
   height: auto;
   min-height: 426px;
   padding: 20.5px 0 50px 0;
@@ -540,8 +566,8 @@ li {
   .p-introduction__area--trainer, .p-introduction__area--staff {
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    width: 80vw;
+    justify-content: space-between;
+    width: 85vw;
     min-height: inherit;
   }
 }
@@ -563,7 +589,7 @@ li {
 }
 @media (min-width: 960px) {
   .p-introduction__card {
-    width: 25vw;
+    flex: 0 0 30%;
     height: auto;
     margin: 0 7.5px;
   }
@@ -589,7 +615,7 @@ li {
   }
 }
 .p-slider__container h3, .p-slider__container h4 {
-  width: 90vw;
+  width: 85vw;
   margin: auto;
 }
 .p-slider__container h3 {
@@ -609,7 +635,7 @@ li {
   }
 }
 .p-slider__area {
-  width: 90vw;
+  width: 85vw;
   height: auto;
   position: relative;
   margin: auto;
@@ -689,29 +715,42 @@ li {
 
 .p-price__container {
   background-color: #eb51c2;
+  width: 100%;
+  height: auto;
 }
 .p-price__container > h3 {
-  padding-left: 30px;
+  width: 85vw;
+  margin: auto;
 }
 .p-price__container > h4 {
-  padding-left: 30px;
+  width: 85vw;
+  margin: auto;
 }
 .p-price__area {
   display: flex;
   flex-wrap: nowrap;
   justify-content: flex-start;
-  padding-left: 20px;
   overflow-x: auto;
+  width: 85vw;
+  margin: auto;
   white-space: nowrap;
+}
+@media (min-width: 960px) {
+  .p-price__area {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 0;
+    overflow-x: hidden;
+  }
 }
 .p-price__box {
   position: relative;
   text-align: center;
   background-color: #ffffff;
-  flex: 0 0 320px;
+  flex: 0 0 30%;
   height: 492px;
   border-radius: 10px;
-  margin: 0 10px;
+  margin: 40px 10px;
 }
 .p-price__content--main {
   width: 250px;
@@ -726,6 +765,20 @@ li {
   padding-bottom: 33px;
   border-top: solid rgba(0, 0, 0, 0.4);
 }
+.p-price__content--plate {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 0%;
+  left: 50%;
+  border-radius: 30px;
+  background-color: gold;
+  width: 256px;
+  height: 45px;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .p-price__wave--top svg, .p-price__wave--bottom svg {
   display: block;
   width: 100vw;
@@ -739,5 +792,31 @@ li {
 }
 .p-price__wave--bottom {
   margin-top: -2px;
+}
+
+.p-qanda__container {
+  width: 85vw;
+  height: auto;
+  margin: auto;
+}
+.p-qanda__list--question, .p-qanda__list--answer {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  border-bottom: solid rgba(0, 0, 0, 0.3);
+}
+.p-qanda__list--question p, .p-qanda__list--answer p {
+  display: inline-block;
+}
+.p-qanda__list--question p:first-of-type, .p-qanda__list--answer p:first-of-type {
+  vertical-align: top;
+  text-align: left;
+  width: 7%;
+  height: 100%;
+}
+.p-qanda__list--question p:nth-of-type(2), .p-qanda__list--answer p:nth-of-type(2) {
+  width: 85%;
+}
+.p-qanda__list--answer {
+  display: none;
 }
 /*# sourceMappingURL=style.css.map */

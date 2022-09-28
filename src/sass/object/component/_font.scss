@@ -164,4 +164,37 @@
   &__sub-heading--price {
     font-size: 1.8rem;
   }
+  &__plate--price {
+    font-size: 2.0rem;
+    color: val.$pink;
+    //line-height: 2.0rem;
+  }
+  &__heading--qanda {
+    @include mixin.josefin500;
+    font-size: 4.0rem;
+    @include mixin.mq("pc") {
+      font-size: 6.0rem
+    }
+  }
+  &__sub-heading--qanda {
+    color: val.$pink;
+    font-size: 1.2rem;
+    @include mixin.mq("pc") {
+      font-size: 2.0rem;
+    }
+  }
+  &__text--qanda {
+    font-size: 1.5rem;
+    @include mixin.mq("pc") {
+      
+    }
+  }
+  &__icon--qanda {
+    @include mixin.josefin600;
+    color: val.$pink;
+    font-size: 2.6rem;
+    @include mixin.mq("pc") {
+      
+    }
+  }
 }

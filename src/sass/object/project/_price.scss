@@ -4,36 +4,49 @@
 .p-price {
   &__container {
     background-color: val.$pink;
+    width: 100%;
+    height: auto;
     & > h3 {
-      padding-left: 30px;
+      width: 85vw;
+      margin: auto;
     }
     & > h4 {
-      padding-left: 30px;
+      width: 85vw;
+      margin: auto;
     }
   }
   &__area {
-    
     display: flex;
     flex-wrap: nowrap;
     justify-content: flex-start;
-    padding-left: 20px;
+    //padding-left: 20px;
     overflow-x: auto;
+    width: 85vw;
+    margin: auto;
     white-space: nowrap;
+    @include mixin.mq("pc") {
+      display: flex;
+      justify-content: space-between;
+      padding-left: 0;
+      overflow-x: hidden;
+    }
   }
   &__box {
     position: relative;
     text-align: center;
     background-color: val.$white;
-    flex: 0 0 320px;
+    flex: 0 0 30%;
     height: 492px;
     border-radius: 10px;
-    margin: 0 10px;
+    margin: 40px 10px;
+    // box-sizing: content-box;
+    // padding-top: 40px;
   }
   &__content {
     &--main {
       width: 250px;
       margin: auto;
-      padding-top   : 35px;
+      padding-top: 35px;
       padding-bottom: 28px;
       //border-bottom: solid rgba(0, 0, 0, .4);
     }
@@ -42,16 +55,23 @@
       margin: auto;
       padding-top: 27px;
       padding-bottom: 33px;
-      border-top: solid rgba(0, 0, 0, .4);
+      border-top: solid rgba(0, 0, 0, 0.4);
     }
     &--plate {
-
+      position: absolute;
+      transform: translate(-50%, -50%);
+      top: 0%;
+      left: 50%;
+      border-radius: 30px;
+      background-color: gold;
+      width: 256px;
+      height: 45px;
+      z-index: 10;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
   }
-
-
-
-
 
   &__wave--top {
     svg {
