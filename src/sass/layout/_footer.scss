@@ -1,0 +1,14 @@
+@use "../foundation/_variables.scss" as val;
+@use "../foundation/_mixin.scss";
+
+#l-footer {
+  position        : relative;
+  background-color: val.$black;
+  width           : 100%;
+  height          : auto;
+  padding         : 50px 0 50px 0;
+  @include mixin.mq("pc") {
+    padding: 100px 0 100px 0;
+  }
+  
+}

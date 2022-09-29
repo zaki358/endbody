@@ -15,4 +15,50 @@
       height    : 90px;
     }
   }
+  &__guide {
+    background-color: val.$white;
+    color: val.$pink;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.3rem;
+    width: 300px;
+    height: 55px;
+    @include mixin.mq("pc") {
+      font-size: 2.0rem;
+      width: 360px;
+      height: 80px;
+    }
+  }
+  &__footer--page-top {
+    padding: 0;
+    position: absolute;
+    right: 5%;
+    bottom: 10%;
+    border-radius: 50%;
+    border: none;
+    background-color: val.$white;
+    width: 40px;
+    height: 40px;
+    &::before {
+      content: "";
+      position: absolute;
+      left: 40%;
+      top: 60%;
+      width: 10px;
+      height: 10px;
+      border-top: solid 2px val.$pink;
+      border-left: solid 2px val.$pink;
+      transform: rotate(45deg) translate(-50%, -50%);
+    }
+    @include mixin.mq("pc") {
+      width: 80px;
+      height: 80px;
+      &::before {
+        left: 38%;
+        top: 60%;
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
 }

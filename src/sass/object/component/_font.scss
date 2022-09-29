@@ -197,4 +197,13 @@
       
     }
   }
+  &__heading--guide {
+    @include mixin.josefin600;
+    color: val.$white;
+    font-size: 2.6rem;
+    @include mixin.mq("pc") {
+      @include mixin.josefin500;
+      font-size: 6.4rem;
+    }
+  }
 }
