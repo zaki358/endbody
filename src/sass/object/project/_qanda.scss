@@ -3,7 +3,8 @@
 
 .p-qanda {
   &__container {
-    width: 85vw;
+    width: val.$sectionWidth;
+    max-width: val.$maxWidthPc;
     height: auto;
     margin: auto;
   }
@@ -14,24 +15,24 @@
 
   }
   &__list--question {
+    display: flex;
     padding-top: 16px;
     padding-bottom: 16px;
     border-bottom: solid rgba(000, 000, 000, .3);
-    p {
-      display: inline-block;
-    }
     p:first-of-type {
       vertical-align: top;
       text-align: left;
-      width: 7%;
-      height: 100%
+      width: auto;
+      margin-right: 20.5px;
+      //height: 100%
     }
     p:nth-of-type(2) {
-      width: 85%;
+      padding-top: 6px;
+      width: auto;
     }
   }
   &__list--answer {
-    display: none;
+    //display: none;
     @extend .p-qanda__list--question;
   }
 }

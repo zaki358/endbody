@@ -530,6 +530,9 @@ li {
   }
 }
 
+.p-service__area {
+  width: 100%;
+}
 .p-service__content--training, .p-service__content--food {
   overflow: hidden;
   height: auto;
@@ -540,6 +543,8 @@ li {
     display: flex;
     justify-content: center;
     align-items: flex-end;
+    max-width: 1450px;
+    margin: auto;
   }
 }
 .p-service__content--food {
@@ -571,8 +576,9 @@ li {
     margin-left: -100px;
     margin-right: 0;
     max-height: initial;
-    min-width: 555px;
-    width: 38vw;
+    max-width: 555px;
+    min-width: 445px;
+    flex: 0 0 38vw;
     height: 495px;
   }
 }
@@ -601,6 +607,7 @@ li {
 }
 .p-introduction__container h3 {
   width: 85vw;
+  max-width: 1110px;
   margin: 0 auto;
 }
 @media (min-width: 960px) {
@@ -610,6 +617,7 @@ li {
 }
 .p-introduction__container h4 {
   width: 85vw;
+  max-width: 1110px;
   margin: 0 auto;
 }
 @media (min-width: 960px) {
@@ -620,6 +628,7 @@ li {
 .p-introduction__menu {
   padding: 0;
   width: 85vw;
+  max-width: 1110px;
   margin: 0 auto;
 }
 .p-introduction__menu ul {
@@ -657,6 +666,7 @@ li {
     flex-direction: row;
     justify-content: space-between;
     width: 85vw;
+    max-width: 1110px;
     min-height: inherit;
   }
 }
@@ -678,9 +688,9 @@ li {
 }
 @media (min-width: 960px) {
   .p-introduction__card {
-    flex: 0 0 30%;
+    flex: 0 0 27.5vw;
     height: auto;
-    margin: 0 7.5px;
+    max-width: 360px;
   }
 }
 .p-introduction__card p {
@@ -705,6 +715,7 @@ li {
 }
 .p-slider__container h3, .p-slider__container h4 {
   width: 85vw;
+  max-width: 1110px;
   margin: auto;
 }
 .p-slider__container h3 {
@@ -725,6 +736,7 @@ li {
 }
 .p-slider__area {
   width: 85vw;
+  max-width: 1110px;
   height: auto;
   position: relative;
   margin: auto;
@@ -809,10 +821,12 @@ li {
 }
 .p-price__container > h3 {
   width: 85vw;
+  max-width: 1110px;
   margin: auto;
 }
 .p-price__container > h4 {
   width: 85vw;
+  max-width: 1110px;
   margin: auto;
 }
 .p-price__area {
@@ -821,6 +835,7 @@ li {
   justify-content: flex-start;
   overflow-x: auto;
   width: 85vw;
+  max-width: 1110px;
   margin: auto;
   white-space: nowrap;
 }
@@ -836,10 +851,17 @@ li {
   position: relative;
   text-align: center;
   background-color: #ffffff;
-  flex: 0 0 30%;
+  flex: 0 0 290px;
   height: 492px;
   border-radius: 10px;
   margin: 40px 10px;
+}
+@media (min-width: 960px) {
+  .p-price__box {
+    margin: 40px 0;
+    max-width: 350px;
+    flex: 0 0 27.5vw;
+  }
 }
 .p-price__content--main {
   width: 250px;
@@ -885,30 +907,26 @@ li {
 
 .p-qanda__container {
   width: 85vw;
+  max-width: 1110px;
   height: auto;
   margin: auto;
 }
 .p-qanda__list--question, .p-qanda__list--answer {
+  display: flex;
   padding-top: 16px;
   padding-bottom: 16px;
   border-bottom: solid rgba(0, 0, 0, 0.3);
 }
-.p-qanda__list--question p, .p-qanda__list--answer p {
-  display: inline-block;
-}
 .p-qanda__list--question p:first-of-type, .p-qanda__list--answer p:first-of-type {
   vertical-align: top;
   text-align: left;
-  width: 7%;
-  height: 100%;
+  width: auto;
+  margin-right: 20.5px;
 }
 .p-qanda__list--question p:nth-of-type(2), .p-qanda__list--answer p:nth-of-type(2) {
-  width: 85%;
+  padding-top: 6px;
+  width: auto;
 }
-.p-qanda__list--answer {
-  display: none;
-}
-
 .p-guide__container {
   width: 100%;
   height: auto;

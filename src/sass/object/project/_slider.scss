@@ -9,7 +9,8 @@
 
     }
     h3,h4 {
-      width: 85vw;
+      width: val.$sectionWidth;
+      max-width: val.$maxWidthPc;
       margin: auto;
     }
     h3 {
@@ -26,7 +27,8 @@
     }
   }
   &__area {
-    width: 85vw;
+    width: val.$sectionWidth;
+    max-width: val.$maxWidthPc;
     height: auto;
     position: relative;
     margin: auto;
@@ -102,7 +104,7 @@
     }
     .swiper-pagination {
       @include mixin.mq("pc") {
-        bottom: 64px !important; 
+        bottom: 64px !important;
       }
     }
     .swiper-pagination-bullet-active {
