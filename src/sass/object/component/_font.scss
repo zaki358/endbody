@@ -5,7 +5,7 @@
 .c-font {
   &__top-title {
     line-height: normal;
-    font-size  : 4.2rem;
+    font-size: min(11vw, 90px);
     @include mixin.josefin500;
     span {
       background-color: val.$white;
@@ -14,14 +14,15 @@
       }
     }
     @include mixin.mq("pc") {
-      font-size: 9.0rem;
+      //font-size: 9.0rem;
     }
   }
   &__heading--top-main {
     background-color: val.$white;
     font-family     : sans-serif;
     font-weight     : 200;
-    font-size       : 1.3rem;
+    font-size: min(3.5vw, 28px);
+    //font-size       : 1.3rem;
     @include mixin.mq("pc") {
       font-weight: 600;
       font-size  : 2.8rem;

@@ -3,36 +3,43 @@
 
 .p-qanda {
   &__container {
-    width: val.$sectionWidth;
+    width    : val.$sectionWidth;
+    height   : auto;
     max-width: val.$maxWidthPc;
-    height: auto;
-    margin: auto;
+    margin   : auto;
   }
-  &__area {
-
-  }
-  &__box {
-
+  &__area {}
+  &__toggle {
+    display: none;
   }
   &__list--question {
-    display: flex;
-    padding-top: 16px;
-    padding-bottom: 16px;
+    display      : flex;
+    padding      : 20px 30px 15px 0;
     border-bottom: solid rgba(000, 000, 000, .3);
+    height: auto;
     p:first-of-type {
       vertical-align: top;
-      text-align: left;
-      width: auto;
-      margin-right: 20.5px;
-      //height: 100%
-    }
-    p:nth-of-type(2) {
-      padding-top: 6px;
-      width: auto;
+      text-align    : left;
+      width         : auto;
+      margin-right  : 20.5px;
     }
   }
   &__list--answer {
-    //display: none;
     @extend .p-qanda__list--question;
+    opacity      : 0;
+    visibility   : hidden;
+    padding      : 0;
+    border-bottom: none;
+    height       : 0;
+  }
+  &__toggle:checked + .p-qanda__list--question {
+    border: none;
+  }
+  &__toggle:checked + .p-qanda__list--question + .p-qanda__list--answer {
+    opacity       : 1;
+    visibility    : visible;
+    border-bottom : solid rgba(000, 000, 000, .3);
+    height        : auto;
+    padding-bottom: 15px;
   }
 }

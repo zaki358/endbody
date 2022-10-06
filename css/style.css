@@ -98,7 +98,7 @@ li {
 
 .c-font__top-title {
   line-height: normal;
-  font-size: 4.2rem;
+  font-size: min(11vw, 90px);
   font-family: "Josefin Sans", sans-serif;
   font-weight: 500;
 }
@@ -108,16 +108,11 @@ li {
 .c-font__top-title span span {
   color: #eb51c2;
 }
-@media (min-width: 960px) {
-  .c-font__top-title {
-    font-size: 9rem;
-  }
-}
 .c-font__heading--top-main {
   background-color: #ffffff;
   font-family: sans-serif;
   font-weight: 200;
-  font-size: 1.3rem;
+  font-size: min(3.5vw, 28px);
 }
 @media (min-width: 960px) {
   .c-font__heading--top-main {
@@ -489,15 +484,14 @@ li {
   }
 }
 .p-top-group__img {
-  position: absolute;
-  top: 0;
-  right: 0;
+  display: block;
+  margin: 0 0 0 auto;
 }
 .p-top-group__main {
   position: absolute;
   display: flex;
   flex-direction: column;
-  top: 160px;
+  top: 12%;
   left: 25px;
   min-width: 232px;
 }
@@ -507,24 +501,25 @@ li {
 .p-top-group__main button {
   margin-top: 15px;
 }
+@media (min-width: 960px) {
+  .p-top-group__main {
+    top: 22%;
+    left: 6%;
+  }
+}
 .p-top-group__sub {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: absolute;
-  top: 390px;
-  left: 50%;
-  transform: translateX(-50%);
+  text-align: center;
   overflow: hidden;
   width: 100vw;
+  margin-top: -20px;
+}
+.p-top-group__sub h2 {
+  margin: auto;
 }
 .p-top-group__sub p {
   margin-top: 23px;
 }
 @media (min-width: 960px) {
-  .p-top-group__sub {
-    top: 660px;
-  }
   .p-top-group__sub p {
     text-align: center;
   }
@@ -532,6 +527,7 @@ li {
 
 .p-service__area {
   width: 100%;
+  margin-top: 35px;
 }
 .p-service__content--training, .p-service__content--food {
   overflow: hidden;
@@ -907,15 +903,18 @@ li {
 
 .p-qanda__container {
   width: 85vw;
-  max-width: 1110px;
   height: auto;
+  max-width: 1110px;
   margin: auto;
+}
+.p-qanda__toggle {
+  display: none;
 }
 .p-qanda__list--question, .p-qanda__list--answer {
   display: flex;
-  padding-top: 16px;
-  padding-bottom: 16px;
+  padding: 20px 30px 15px 0;
   border-bottom: solid rgba(0, 0, 0, 0.3);
+  height: auto;
 }
 .p-qanda__list--question p:first-of-type, .p-qanda__list--answer p:first-of-type {
   vertical-align: top;
@@ -923,13 +922,28 @@ li {
   width: auto;
   margin-right: 20.5px;
 }
-.p-qanda__list--question p:nth-of-type(2), .p-qanda__list--answer p:nth-of-type(2) {
-  padding-top: 6px;
-  width: auto;
+.p-qanda__list--answer {
+  opacity: 0;
+  visibility: hidden;
+  padding: 0;
+  border-bottom: none;
+  height: 0;
 }
+.p-qanda__toggle:checked + .p-qanda__list--question, .p-qanda__toggle:checked + .p-qanda__list--answer {
+  border: none;
+}
+.p-qanda__toggle:checked + .p-qanda__list--question + .p-qanda__list--answer, .p-qanda__toggle:checked + .p-qanda__list--answer + .p-qanda__list--answer {
+  opacity: 1;
+  visibility: visible;
+  border-bottom: solid rgba(0, 0, 0, 0.3);
+  height: auto;
+  padding-bottom: 15px;
+}
+
 .p-guide__container {
   width: 100%;
   height: auto;
+  margin-top: 60px;
 }
 .p-guide__box--background {
   background-image: url(../../../../src/images/front-page_guide_background_sp.png);
