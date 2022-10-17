@@ -95,6 +95,9 @@
       }
     }
   }
+  &__area--trainer.js-fadein {
+    animation: fade-in-bottom 1s ease-in-out both;
+  }
   &__area--staff {
     display: none;
     @extend .p-introduction__area--trainer;
@@ -120,6 +123,17 @@
   &__wave--bottom {
     margin-top: -2px;
     @extend .p-introduction__wave--top;
+  }
+}
+
+@keyframes fade-in-bottom {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
   }
 }
 

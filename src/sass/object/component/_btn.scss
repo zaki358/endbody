@@ -31,9 +31,10 @@
   }
   &__footer--page-top {
     padding: 0;
-    position: absolute;
+    position: fixed;
     right: 5%;
     bottom: 10%;
+    opacity: 0;
     border-radius: 50%;
     border: none;
     background-color: val.$white;
