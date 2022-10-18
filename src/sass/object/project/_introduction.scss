@@ -55,6 +55,7 @@
     width: 50%;
     height: 35px;
     line-height: 35px;
+    cursor: default;
     @include mixin.mq("pc") {
 
     }
@@ -66,15 +67,23 @@
       width: 100%;
       height: 3px;
       background-color: val.$white;
+      opacity: 0;
+    }
+  }
+  &__list--trainer.js-tab {
+    &::before {
+      //content: "";
+      opacity: 1;
     }
   }
   &__list--staff {
     @extend .p-introduction__list--trainer;
     &::before {
-      opacity: 0;
+      //opacity: 0;
     }
   }
   &__area--trainer {
+    display: none;
     margin: 0 auto;
     width: val.$sectionWidth;
     height: auto;
@@ -98,6 +107,11 @@
   &__area--trainer.js-fadein {
     animation: fade-in-bottom 1s ease-in-out both;
   }
+  &__area--trainer.js-tab {
+    display: block;
+  }
+
+  
   &__area--staff {
     display: none;
     @extend .p-introduction__area--trainer;

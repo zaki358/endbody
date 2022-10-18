@@ -3,6 +3,13 @@
 
 
 .c-font {
+  &__header--btn {
+    color      : val.$white;
+    font-family: sans-serif;
+    font-weight: 200;
+    font-size  : 1.3rem;
+    margin-left: 10%;
+  }
   &__top-title {
     line-height: normal;
     font-size: min(11vw, 90px);
